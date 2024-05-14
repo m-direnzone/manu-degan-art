@@ -1,15 +1,66 @@
-import { useTranslation } from "react-i18next";
 import "./App.css";
-import Navbar from "./components/Navbar";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./routes/Home";
+import Biography from "./routes/Biography";
+import Gallery from "./routes/Gallery";
+import School from "./routes/School";
+import Contacts from "./routes/Contacts";
+import ScrollToTop from "./utils/scrollToTop";
+import { StyledEngineProvider } from "@mui/styled-engine";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <>
+        <ScrollToTop />
+        <Home />
+      </>
+    ),
+  },
+  {
+    path: "/biography",
+    element: (
+      <>
+        <ScrollToTop />
+        <Biography />
+      </>
+    ),
+  },
+  {
+    path: "/gallery",
+    element: (
+      <>
+        <ScrollToTop />
+        <Gallery />
+      </>
+    ),
+  },
+  {
+    path: "/school",
+    element: (
+      <>
+        <ScrollToTop />
+        <School />
+      </>
+    ),
+  },
+  {
+    path: "/contacts",
+    element: (
+      <>
+        <ScrollToTop />
+        <Contacts />
+      </>
+    ),
+  },
+]);
 
 function App() {
-  const { t } = useTranslation();
   return (
-    <div className="App">
-      <Navbar />
-      <h1>{t("titolo")}</h1>
-      <h2>{t("sottotitolo")}</h2>
-    </div>
+    <StyledEngineProvider injectFirst>
+      <RouterProvider router={router} />
+    </StyledEngineProvider>
   );
 }
 
