@@ -6,7 +6,7 @@ const Layout = ({ children }: PropsWithChildren) => {
   return (
     <div>
       <Navbar />
-      <div className="contant-container">{children}</div>
+      <div className="content-container">{children}</div>
       <Footer />
     </div>
   );

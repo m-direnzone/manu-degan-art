@@ -7,6 +7,7 @@ import School from "./routes/School";
 import Contacts from "./routes/Contacts";
 import ScrollToTop from "./utils/scrollToTop";
 import { StyledEngineProvider } from "@mui/styled-engine";
+import { createTheme, ThemeProvider } from "@mui/material";
 
 const router = createBrowserRouter([
   {
@@ -56,10 +57,18 @@ const router = createBrowserRouter([
   },
 ]);
 
+const theme = createTheme({
+  typography: {
+    fontFamily: "Della Respira, serif",
+  },
+});
+
 function App() {
   return (
     <StyledEngineProvider injectFirst>
-      <RouterProvider router={router} />
+      <ThemeProvider theme={theme}>
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </StyledEngineProvider>
   );
 }

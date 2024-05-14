@@ -1,8 +1,9 @@
 import { Typography } from "@mui/material";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import LanguageSelector from "./LanguageSelector";
 import { NavLink } from "react-router-dom";
+import { IT, US } from "country-flag-icons/react/3x2";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -21,42 +22,84 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <ul>
+    <div className="navbar-container">
+      <ul className="navbar">
         <li>
-          <NavLink to={"/"}>
-            <Typography>Emanuela Degan</Typography>
+          <NavLink className={"navlink"} to={"/"}>
+            <Typography className="link-text">Emanuela Degan</Typography>
           </NavLink>
         </li>
         <li>
-          <NavLink to={"/biography"}>
-            <Typography>Biografia</Typography>
+          <NavLink className={"navlink"} to={"/biography"}>
+            <Typography className="link-text">{t("biografia")}</Typography>
           </NavLink>
         </li>
         <li>
-          <NavLink to={"/gallery"}>
-            <Typography>Galleria</Typography>
+          <NavLink className={"navlink"} to={"/gallery"}>
+            <Typography className="link-text">{t("galleria")}</Typography>
           </NavLink>
         </li>
 
         <li>
-          <NavLink to={"/school"}>
-            <Typography>Scuola</Typography>
+          <NavLink className={"navlink"} to={"/school"}>
+            <Typography className="link-text">{t("scuola")}</Typography>
           </NavLink>
         </li>
         <li>
-          <NavLink to={"/contacts"}>
-            <Typography>Contatti</Typography>
+          <NavLink className={"navlink"} to={"/contacts"}>
+            <Typography className="link-text">{t("contatti")}</Typography>
           </NavLink>
         </li>
+        <li />
+        <li />
         <li>
-          <LanguageSelector
-            currentLanguage={currentLanguage}
-            onChangeLanguage={changeLanguage}
-          />
+          <div className="dropdown-menu-container">
+            <div className="language-choice" style={{ marginTop: "10%" }}>
+              {currentLanguage === "it" ? (
+                <IT className="flag-icon" />
+              ) : (
+                <US className="flag-icon" />
+              )}
+              <Typography color={"#a39922"}>
+                {currentLanguage === "it" ? "IT" : "EN"}
+              </Typography>
+              <KeyboardArrowDownIcon className="link-icon" />
+            </div>
+            <div className="dropdown-menu">
+              <div
+                className="language-choice"
+                style={{ marginTop: "20px" }}
+                onClick={() => changeLanguage("it")}
+              >
+                <IT className="flag-icon" />
+                <Typography
+                  color={currentLanguage === "it" ? "#ffe603" : "#a39922"}
+                >
+                  Italiano
+                </Typography>
+              </div>
+              <div
+                className="language-choice"
+                style={{ marginTop: "10px" }}
+                onClick={() => changeLanguage("en")}
+              >
+                <US className="flag-icon" />
+                <Typography
+                  color={currentLanguage === "en" ? "#ffe603" : "#a39922"}
+                >
+                  English
+                </Typography>
+              </div>
+            </div>
+          </div>
         </li>
       </ul>
-      <Typography>{t("ciao")}</Typography>
+      {/* <div className="language-menu-container">
+        <LanguageSelector
+          currentLanguage={currentLanguage}
+          onChangeLanguage={changeLanguage}
+        />
+      </div> */}
     </div>
   );
 };
