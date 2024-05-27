@@ -21,11 +21,11 @@
 
 .navlink {
   text-decoration: none;
-  color: #a39922;
+  color: #b0a300;
 }
 
 .navlink:hover {
-  color: #a3982285;
+  color: #b0a40086;
 }
 
 .active,
@@ -60,6 +60,7 @@
 .link-icon {
   height: 25px;
   width: 25px;
+  color: #b0a300;
 }
 
 .flag-icon {
@@ -74,6 +75,33 @@
 }
 
 .content-container {
-  margin-top: 10%;
-  padding: 0 5%;
+  margin-top: 6%;
+}
+
+.video-responsive iframe {
+  border: 0;
+  border-radius: 30px;
+}
+
+.home-background-container {
+  background-image: url(./images/emanuela-degan.jpg);
+  min-height: 850px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 20%;
+}
+
+.title {
+  font-size: 50px;
+  color: #b0a300;
+}
+
+.small-title {
+  font-size: 25px;
+  color: #b0a300;
+}
+
+.paragraph {
+  margin-top: 3%;
 }
