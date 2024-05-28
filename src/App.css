@@ -99,9 +99,21 @@
 
 .small-title {
   font-size: 25px;
-  color: #b0a300;
+  color: #c1c1c1;
 }
 
 .paragraph {
   margin-top: 3%;
+}
+
+.article-container {
+  margin: 0 10%;
+  padding: 2% 5%;
+  background-color: #fefefe;
+  height: 200px;
+}
+
+.article-title {
+  font-size: 30px;
+  color: #c1c1c1;
 }
