@@ -16,9 +16,11 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
           <Typography className="article-title">{article.title}</Typography>
         </Grid>
         <Grid item xs={12} xl={12} className="article-preview-container">
-          <Typography>{article.preview}</Typography>
+          <Typography className="article-preview">{article.preview}</Typography>
         </Grid>
-        <Link to={`${article.link}`}>{t("leggi-di-piu")}</Link>
+        <Link to={`${article.link}`} target="_blank" className="read-more-link">
+          {t("leggi-di-piu")}
+        </Link>
       </Grid>
     </Paper>
   );

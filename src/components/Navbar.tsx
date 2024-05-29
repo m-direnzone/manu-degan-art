@@ -68,27 +68,27 @@ const Navbar = () => {
             <div className="dropdown-menu">
               <div
                 className="language-choice"
-                style={{ marginTop: "20px" }}
+                style={{
+                  marginTop: "20px",
+                  borderBottom:
+                    currentLanguage === "it" ? "2px solid #e3e3e3" : "0",
+                }}
                 onClick={() => changeLanguage("it")}
               >
                 <IT className="flag-icon" />
-                <Typography
-                  color={currentLanguage === "it" ? "#ffe603" : "#a39922"}
-                >
-                  Italiano
-                </Typography>
+                <Typography color={"#b0a300"}>Italiano</Typography>
               </div>
               <div
                 className="language-choice"
-                style={{ marginTop: "10px" }}
+                style={{
+                  marginTop: "10px",
+                  borderBottom:
+                    currentLanguage === "en" ? "2px solid #e3e3e3" : "0",
+                }}
                 onClick={() => changeLanguage("en")}
               >
                 <US className="flag-icon" />
-                <Typography
-                  color={currentLanguage === "en" ? "#ffe603" : "#a39922"}
-                >
-                  English
-                </Typography>
+                <Typography color={"#b0a300"}>English</Typography>
               </div>
             </div>
           </div>
