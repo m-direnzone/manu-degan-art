@@ -5,5 +5,12 @@
   "contatti": "Contatti",
   "titolo-youtube": "Interviste Visibili su Youtube",
   "leggi-di-piu": "Leggi di più",
-  "titolo-articoli": "Articoli che parlano di me"
+  "titolo-articoli": "Articoli che parlano di me",
+  "nome": "Nome",
+  "cognome": "Cognome",
+  "oggetto": "Oggetto",
+  "messaggio": "Messaggio",
+  "restiamo-in-contatto": "Restiamo in contatto",
+  "campi-obbligatori": "Campi obbligatori",
+  "invia": "Invia"
 }

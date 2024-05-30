@@ -5,5 +5,12 @@
   "contatti": "Contacts",
   "titolo-youtube": "Interviews Viewable on Youtube",
   "leggi-di-piu": "Read more",
-  "titolo-articoli": "Articles about me"
+  "titolo-articoli": "Articles about me",
+  "nome": "Name",
+  "cognome": "Surname",
+  "oggetto": "Subject",
+  "messaggio": "Message",
+  "restiamo-in-contatto": "Let's stay in touch",
+  "campi-obbligatori": "Required fields",
+  "invia": "Send"
 }
