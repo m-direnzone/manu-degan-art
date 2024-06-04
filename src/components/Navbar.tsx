@@ -8,16 +8,16 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 const Navbar = () => {
   const { t, i18n } = useTranslation();
 
-  const [currentLanguage, setCurrentLanguage] = useState("it");
+  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
   const changeLanguage = (languageToChange: string) => {
     debugger;
     if (languageToChange === "it") {
       i18n.changeLanguage("it");
       setCurrentLanguage("it");
-    } else if (languageToChange === "en") {
+    } else if (languageToChange === "en-US") {
       i18n.changeLanguage("en-US");
-      setCurrentLanguage("en");
+      setCurrentLanguage("en-US");
     }
   };
 
@@ -83,9 +83,9 @@ const Navbar = () => {
                 style={{
                   marginTop: "10px",
                   borderBottom:
-                    currentLanguage === "en" ? "2px solid #e3e3e3" : "0",
+                    currentLanguage === "en-US" ? "2px solid #e3e3e3" : "0",
                 }}
-                onClick={() => changeLanguage("en")}
+                onClick={() => changeLanguage("en-US")}
               >
                 <US className="flag-icon" />
                 <Typography color={"#b0a300"}>English</Typography>

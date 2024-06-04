@@ -86,7 +86,7 @@
 
 .video-responsive iframe {
   border: 0;
-  border-radius: 30px;
+  border-radius: 10px;
 }
 
 .home-background-container {
@@ -109,7 +109,6 @@
 }
 
 .paragraph {
-  margin-top: 3%;
   font-size: 18px;
 }
 
@@ -171,4 +170,11 @@
 
 .form-field {
   width: 100%;
+}
+
+.biography-image {
+  height: 750px;
+  width: 500px;
+  margin-left: 20%;
+  border-radius: 10px;
 }

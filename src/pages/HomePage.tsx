@@ -24,7 +24,7 @@ const HomePage = () => {
             <Typography className="small-title" marginTop={5}>
               In punta di matita <br /> Emanuela Degan 12/02/2023
             </Typography>
-            <Typography className="paragraph">
+            <Typography className="paragraph" mt={"3%"}>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Repudiandae, enim, aspernatur optio dolore pariatur eum ea
               nesciunt inventore necessitatibus doloremque magnam quaerat omnis
@@ -41,7 +41,7 @@ const HomePage = () => {
               In punta di matita di Emanuela Degan alla Soffitta Spazio delle
               Arti a Sesto Fiorentino
             </Typography>
-            <Typography className="paragraph">
+            <Typography className="paragraph" mt={"3%"}>
               In punta di matita di Emanuela Degan alla Soffitta Spazio delle
               Arti a Sesto Fiorentino. Introduce Francesco Mariani della
               Soffitta Spazio delle Arti. Jacopo Madau Assessore alla cultura
@@ -58,7 +58,7 @@ const HomePage = () => {
             <Typography className="small-title" marginTop={5}>
               Artebellariva Residenza d'Artista Emanuela Degan
             </Typography>
-            <Typography className="paragraph">
+            <Typography className="paragraph" mt={"3%"}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
               ex doloribus dignissimos quibusdam placeat debitis sequi nulla
               similique! Alias perspiciatis qui debitis unde ducimus quae
