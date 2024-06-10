@@ -12,10 +12,9 @@ const ContactsPage = () => {
               {t("restiamo-in-contatto")}
             </Typography>
             <Typography fontSize={20} mt={"1%"}>
-              Non esitare a scrivermi <br /> Compila il modulo qui sotto con i
-              tuoi recapiti in modo che io possa risponderti il prima possibile.{" "}
+              {t("non-esitare-a-scrivermi")} <br /> {t("compila-il-modulo")}{" "}
               <br />
-              Grazie!
+              {t("grazie")}
             </Typography>
           </Grid>
           <form onSubmit={() => alert("CIAOOO")} style={{ marginLeft: "10%" }}>

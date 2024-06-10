@@ -4,9 +4,18 @@ import { useTranslation } from "react-i18next";
 import { articles } from "../data/articles";
 import ArticleCard from "../components/ArticleCard";
 import Carousel from "react-material-ui-carousel";
+import { useEffect, useState } from "react";
+import { isMobile } from "react-device-detect";
 
 const HomePage = () => {
   const { t } = useTranslation();
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
+  useEffect(() => {
+    if (isMobile || window.innerWidth <= 1050) {
+      setIsMobileDevice(true);
+    }
+  }, []);
+
   return (
     <div>
       <div className="home-background-container" />
@@ -15,9 +24,15 @@ const HomePage = () => {
           <Grid item xl={12} xs={12}>
             <Typography className="title">{t("titolo-youtube")}</Typography>
           </Grid>
-          <Grid item xl={3} xs={12}>
+          <Grid
+            item
+            xl={3}
+            xs={9}
+            mx={isMobileDevice ? "auto" : 0}
+            mb={isMobileDevice ? 4 : 0}
+          >
             <YoutubeLink
-              height={"600px"}
+              height={isMobileDevice ? "400px" : "600px"}
               width={"100%"}
               videoId="sS0CDqpM9bY"
             />
@@ -31,27 +46,40 @@ const HomePage = () => {
               veniam! Quas beatae quia quod voluptatum deleniti!
             </Typography>
           </Grid>
-          <Grid item xl={6} xs={12}>
+          <Grid
+            item
+            xl={6}
+            xs={9}
+            mx={isMobileDevice ? "auto" : 0}
+            mb={isMobileDevice ? 4 : 0}
+          >
             <YoutubeLink
-              height={"600px"}
+              height={isMobileDevice ? "400px" : "600px"}
               width={"100%"}
               videoId="pr_WQy9DN1s"
             />
             <Typography className="small-title" marginTop={5}>
-              In punta di matita di Emanuela Degan alla Soffitta Spazio delle
-              Arti a Sesto Fiorentino
+              In punta di matita di Emanuela Degan {t("alla")} Soffitta Spazio
+              delle Arti {t("a")} Sesto Fiorentino
             </Typography>
             <Typography className="paragraph" mt={"3%"}>
-              In punta di matita di Emanuela Degan alla Soffitta Spazio delle
-              Arti a Sesto Fiorentino. Introduce Francesco Mariani della
-              Soffitta Spazio delle Arti. Jacopo Madau Assessore alla cultura
-              del Comune di Sesto Fiorentino. Lorenzo Pacini critico d'arte e
-              Emanuela Degan pittrice ritrattista
+              In punta di matita di Emanuela Degan {t("alla")} Soffitta Spazio
+              delle Arti {t("a")} Sesto Fiorentino. Introduce Francesco Mariani{" "}
+              {t("della")} Soffitta Spazio delle Arti. Jacopo Madau{" "}
+              {t("assessore-alla-cultura")} Sesto Fiorentino. Lorenzo Pacini{" "}
+              {t("critico-arte")} {t("e")} Emanuela Degan{" "}
+              {t("pittrice-ritrattista")}
             </Typography>
           </Grid>
-          <Grid item xl={3} xs={12}>
+          <Grid
+            item
+            xl={3}
+            xs={9}
+            mx={isMobileDevice ? "auto" : 0}
+            mb={isMobileDevice ? 4 : 0}
+          >
             <YoutubeLink
-              height={"600px"}
+              height={isMobileDevice ? "400px" : "600px"}
               width={"100%"}
               videoId="5311nO8vrBQ"
             />
@@ -68,10 +96,19 @@ const HomePage = () => {
         </Grid>
       </div>
       <div style={{ margin: "5%" }}>
-        <Typography textAlign={"center"} className="title" marginBottom={"2%"}>
+        <Typography
+          textAlign={"center"}
+          className="title"
+          marginBottom={isMobileDevice ? "6%" : "2%"}
+          mx={isMobileDevice ? 5 : 0}
+        >
           {t("titolo-articoli")}
         </Typography>
-        <Carousel interval={5000} duration={1000}>
+        <Carousel
+          interval={5000}
+          duration={1000}
+          sx={{ marginBottom: isMobileDevice ? 3 : 0 }}
+        >
           {articles.map((article) => (
             <ArticleCard article={article} />
           ))}

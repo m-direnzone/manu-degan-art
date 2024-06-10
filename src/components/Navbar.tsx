@@ -1,17 +1,21 @@
-import { Typography } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { IT, US } from "country-flag-icons/react/3x2";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import MenuIcon from "@mui/icons-material/Menu";
+import LanguageSelector from "./LanguageSelector";
 
-const Navbar = () => {
+interface NavbarProps {
+  onMobileMenuOpen?: () => void;
+}
+
+const Navbar = ({ onMobileMenuOpen }: NavbarProps) => {
   const { t, i18n } = useTranslation();
-
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
   const changeLanguage = (languageToChange: string) => {
-    debugger;
     if (languageToChange === "it") {
       i18n.changeLanguage("it");
       setCurrentLanguage("it");
@@ -23,6 +27,12 @@ const Navbar = () => {
 
   return (
     <div className="navbar-container">
+      <IconButton
+        onClick={onMobileMenuOpen}
+        className="hamburger-menu-icon-button"
+      >
+        <MenuIcon className="hamburger-menu-icon" />
+      </IconButton>
       <ul className="navbar">
         <li>
           <NavLink className={"navlink"} to={"/"}>
@@ -94,12 +104,12 @@ const Navbar = () => {
           </div>
         </li>
       </ul>
-      {/* <div className="language-menu-container">
+      <div className="language-menu-container">
         <LanguageSelector
           currentLanguage={currentLanguage}
           onChangeLanguage={changeLanguage}
         />
-      </div> */}
+      </div>
     </div>
   );
 };
