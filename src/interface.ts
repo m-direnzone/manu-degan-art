@@ -12,4 +12,6 @@ export interface Paint {
   year: number;
   height: number;
   width: number;
+  mobileHeight: number;
+  mobileWidth: number;
 }

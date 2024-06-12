@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { paints } from "../data/paints";
 import {
   ImageList,
@@ -12,11 +12,19 @@ import PaintDetail from "../components/PaintDetail";
 import Navbar from "../components/Navbar";
 import { MobileMenu } from "../components/MobileMenu";
 import Footer from "../components/Footer";
+import { isMobile } from "react-device-detect";
 
 const GalleryPage = () => {
   const { t } = useTranslation();
   const [index, setIndex] = useState(-1);
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
+
+  useEffect(() => {
+    if (isMobile || window.innerWidth <= 1050) {
+      setIsMobileDevice(true);
+    }
+  }, []);
 
   const currentImage = paints[index];
   const nextIndex = (index + 1) % paints.length;
@@ -37,6 +45,7 @@ const GalleryPage = () => {
           backToPreviousImage={handleMovePrev}
           allPaintsLenght={paints.length}
           currentPaint={index + 1}
+          isMobile={isMobileDevice}
         />
       ) : (
         <>
@@ -49,7 +58,7 @@ const GalleryPage = () => {
                 <Box
                   sx={{
                     width: "100%",
-                    height: 850,
+                    height: isMobileDevice ? "100%" : 850,
                     overflowY: "scroll",
                   }}
                 >

@@ -11,6 +11,7 @@ interface PaintDetailProps {
   goToNextImage: () => void;
   backToPreviousImage: () => void;
   onClose: () => void;
+  isMobile: boolean;
 }
 
 const PaintDetail = ({
@@ -20,6 +21,7 @@ const PaintDetail = ({
   goToNextImage,
   backToPreviousImage,
   onClose,
+  isMobile,
 }: PaintDetailProps) => {
   return (
     <div className="paint-container">
@@ -37,9 +39,9 @@ const PaintDetail = ({
           <img
             src={paint.src}
             alt=""
-            height={paint.height}
-            width={paint.width}
-            style={{ borderRadius: "5px" }}
+            height={isMobile ? paint.mobileHeight : paint.height}
+            width={isMobile ? paint.mobileWidth : paint.width}
+            style={{ borderRadius: "5px", marginLeft: isMobile ? "12%" : 0 }}
           />
           <div className="paint-detail-description-container">
             <Typography className="small-title">{paint.title}</Typography>

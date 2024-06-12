@@ -25,8 +25,8 @@
 
 .hamburger-menu-icon {
   display: none;
-  height: 4rem;
-  width: 4rem;
+  height: 50px;
+  width: 50px;
   color: #b0a300;
 }
 
@@ -51,8 +51,8 @@
 }
 
 .mobile-menu-close-icon {
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 50px;
+  width: 50px;
   color: #b0a300;
 }
 
@@ -396,5 +396,41 @@
 
   .footer {
     height: 220px;
+  }
+
+  .paint-detail-back-button {
+    height: 25px;
+    width: 25px;
+  }
+
+  .paint-detail-back-button:hover {
+    background-color: #c1c1c1;
+  }
+
+  .paint-detail-back-icon {
+    height: 20px;
+    width: 20px;
+  }
+
+  .paint-detail-next-button {
+    height: 25px;
+    width: 25px;
+  }
+
+  .paint-detail-next-button:hover {
+    background-color: #c1c1c1;
+  }
+
+  .paint-detail-next-icon {
+    height: 20px;
+    width: 20px;
+  }
+
+  .paint-detail-close-button {
+    margin-left: 80%;
+  }
+
+  .paint-detail-image-container {
+    margin-top: 35%;
   }
 }

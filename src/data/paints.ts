@@ -12,6 +12,8 @@ export const paints: Paint[] = [
     year: 2018,
     height: 800,
     width: 600,
+    mobileHeight: 450,
+    mobileWidth: 250,
   },
   {
     src: foto2,
@@ -22,6 +24,8 @@ export const paints: Paint[] = [
     year: 2020,
     height: 600,
     width: 700,
+    mobileHeight: 200,
+    mobileWidth: 250,
   },
   {
     src: fotoProva,
@@ -32,6 +36,8 @@ export const paints: Paint[] = [
     year: 2020,
     height: 800,
     width: 600,
+    mobileHeight: 450,
+    mobileWidth: 250,
   },
   {
     src: foto2,
@@ -42,6 +48,8 @@ export const paints: Paint[] = [
     year: 2020,
     height: 600,
     width: 700,
+    mobileHeight: 200,
+    mobileWidth: 250,
   },
   {
     src: fotoProva,
@@ -52,6 +60,8 @@ export const paints: Paint[] = [
     year: 2020,
     height: 800,
     width: 600,
+    mobileHeight: 450,
+    mobileWidth: 250,
   },
   {
     src: foto2,
@@ -62,6 +72,8 @@ export const paints: Paint[] = [
     year: 2020,
     height: 600,
     width: 700,
+    mobileHeight: 200,
+    mobileWidth: 250,
   },
   {
     src: fotoProva,
@@ -72,6 +84,8 @@ export const paints: Paint[] = [
     year: 2020,
     height: 800,
     width: 600,
+    mobileHeight: 450,
+    mobileWidth: 250,
   },
   {
     src: foto2,
@@ -82,6 +96,8 @@ export const paints: Paint[] = [
     year: 2020,
     height: 600,
     width: 700,
+    mobileHeight: 200,
+    mobileWidth: 250,
   },
   {
     src: fotoProva,
@@ -92,5 +108,7 @@ export const paints: Paint[] = [
     year: 2020,
     height: 800,
     width: 600,
+    mobileHeight: 450,
+    mobileWidth: 250,
   },
 ];
