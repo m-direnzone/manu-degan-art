@@ -3,3 +3,13 @@ export interface Article {
   preview: string;
   link: string;
 }
+
+export interface Paint {
+  src: string;
+  title: string;
+  description: string;
+  paintSize: string;
+  year: number;
+  height: number;
+  width: number;
+}

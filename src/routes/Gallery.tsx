@@ -1,12 +1,7 @@
-import Layout from "../Layout";
 import GalleryPage from "../pages/GalleryPage";
 
 const Gallery = () => {
-  return (
-    <Layout>
-      <GalleryPage />
-    </Layout>
-  );
+  return <GalleryPage />;
 };
 
 export default Gallery;

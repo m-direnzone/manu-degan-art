@@ -16,14 +16,14 @@ const BiographyPage = () => {
 
   return (
     <div>
-      <Grid container px={"2%"} py={"4%"}>
-        {isMobileDevice && (
-          <Grid item xs={12}>
-            <img src={fotoRitratto} alt="" />
-          </Grid>
-        )}
+      <Grid container px={isMobileDevice ? "6%" : "2%"} py={"4%"}>
         <Grid item xs={12} xl={7}>
-          <Typography className="title">{t("la-mia-storia")}</Typography>
+          <Typography className="title" marginTop={isMobileDevice ? "20%" : 0}>
+            {t("la-mia-storia")}
+          </Typography>
+          {isMobileDevice && (
+            <img src={fotoRitratto} alt="" className="biography-image" />
+          )}
           <Typography className="paragraph" mt={"3%"}>
             {t("nascita-e-studi")} {t("vita-lontano-da-arte")}{" "}
             {t("ripresa-attivita")} {t("stile-artistico-e-presente")}
@@ -34,8 +34,12 @@ const BiographyPage = () => {
             <img src={fotoRitratto} alt="" className="biography-image" />
           </Grid>
         )}
-        <Grid item xl={12} xs={12} mt={"2%"}>
-          <Typography className="small-title">
+        <Grid item xl={12} xs={12} mt={isMobileDevice ? "12%" : "2%"}>
+          <Typography
+            className="small-title"
+            mx={isMobileDevice ? "6%" : 0}
+            mb={isMobileDevice ? "5%" : 0}
+          >
             {t("titolo-sezione-premi")}
           </Typography>
           <Typography className="paragraph" mt={"0.5%"}>
@@ -59,8 +63,8 @@ const BiographyPage = () => {
             {t("carta-modigliani")}, 100 x 70 cm
           </Typography>
         </Grid>
-        <Grid item xl={12} xs={12} mt={"2%"}>
-          <Typography className="small-title">
+        <Grid item xl={12} xs={12} mt={isMobileDevice ? "12%" : "2%"}>
+          <Typography className="small-title" mb={isMobileDevice ? "5%" : 0}>
             {t("titolo-sezione-pubblicazioni")}
           </Typography>
           <Typography className="paragraph" mt={"0.5%"}>
@@ -70,8 +74,14 @@ const BiographyPage = () => {
             {t("annuncio-prossima-uscita")}.
           </Typography>
         </Grid>
-        <Grid item xl={12} xs={12} mt={"2%"}>
-          <Typography className="small-title">
+        <Grid
+          item
+          xl={12}
+          xs={12}
+          mt={isMobileDevice ? "12%" : "2%"}
+          mb={isMobileDevice ? "3%" : 0}
+        >
+          <Typography className="small-title" mb={isMobileDevice ? "5%" : 0}>
             {t("titolo-sezione-mostre")}
           </Typography>
           <Typography className="paragraph" mt={"0.5%"}>
