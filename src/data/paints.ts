@@ -4,6 +4,7 @@ import foto2 from "../images/emanuela-degan.jpg";
 
 export const paints: Paint[] = [
   {
+    id: 1,
     src: fotoProva,
     title: "Titolo Quadro 1",
     description:
@@ -16,6 +17,7 @@ export const paints: Paint[] = [
     mobileWidth: 250,
   },
   {
+    id: 2,
     src: foto2,
     title: "Titolo Quadro 2",
     description:
@@ -28,6 +30,7 @@ export const paints: Paint[] = [
     mobileWidth: 250,
   },
   {
+    id: 3,
     src: fotoProva,
     title: "Titolo Quadro 3",
     description:
@@ -40,6 +43,7 @@ export const paints: Paint[] = [
     mobileWidth: 250,
   },
   {
+    id: 4,
     src: foto2,
     title: "Titolo Quadro 4",
     description:
@@ -52,6 +56,7 @@ export const paints: Paint[] = [
     mobileWidth: 250,
   },
   {
+    id: 5,
     src: fotoProva,
     title: "Titolo Quadro 5",
     description:
@@ -64,6 +69,7 @@ export const paints: Paint[] = [
     mobileWidth: 250,
   },
   {
+    id: 6,
     src: foto2,
     title: "Titolo Quadro 6",
     description:
@@ -76,6 +82,7 @@ export const paints: Paint[] = [
     mobileWidth: 250,
   },
   {
+    id: 7,
     src: fotoProva,
     title: "Titolo Quadro 7",
     description:
@@ -88,6 +95,7 @@ export const paints: Paint[] = [
     mobileWidth: 250,
   },
   {
+    id: 8,
     src: foto2,
     title: "Titolo Quadro 8",
     description:
@@ -100,6 +108,7 @@ export const paints: Paint[] = [
     mobileWidth: 250,
   },
   {
+    id: 9,
     src: fotoProva,
     title: "Titolo Quadro 9",
     description:

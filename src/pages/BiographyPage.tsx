@@ -18,9 +18,7 @@ const BiographyPage = () => {
     <div>
       <Grid container px={isMobileDevice ? "6%" : "2%"} py={"4%"}>
         <Grid item xs={12} xl={7}>
-          <Typography className="title" marginTop={isMobileDevice ? "20%" : 0}>
-            {t("la-mia-storia")}
-          </Typography>
+          <Typography className="title">{t("la-mia-storia")}</Typography>
           {isMobileDevice && (
             <img src={fotoRitratto} alt="" className="biography-image" />
           )}

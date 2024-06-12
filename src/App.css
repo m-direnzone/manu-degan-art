@@ -304,7 +304,7 @@
 
 .paint-additional-info-container {
   text-align: right;
-  font-size: 18px;
+  font-size: 25px;
   font-style: italic;
   color: #c1c1c1;
   margin-top: 30px;
@@ -335,6 +335,12 @@
 .paint-detail-next-icon {
   height: 30px;
   width: 30px;
+}
+
+.paint-number-info {
+  position: absolute;
+  margin-top: 2%;
+  margin-left: 3%;
 }
 
 @media only screen and (max-width: 1050px) {
@@ -408,8 +414,8 @@
   }
 
   .paint-detail-back-icon {
-    height: 20px;
-    width: 20px;
+    height: 17px;
+    width: 17px;
   }
 
   .paint-detail-next-button {
@@ -422,8 +428,8 @@
   }
 
   .paint-detail-next-icon {
-    height: 20px;
-    width: 20px;
+    height: 17px;
+    width: 17px;
   }
 
   .paint-detail-close-button {
@@ -432,5 +438,12 @@
 
   .paint-detail-image-container {
     margin-top: 35%;
+  }
+  .paint-additional-info-container {
+    font-size: 18px;
+  }
+  .paint-number-info {
+    margin-top: 5%;
+    margin-left: 5%;
   }
 }

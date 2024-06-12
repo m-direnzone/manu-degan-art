@@ -13,7 +13,7 @@ const ContactsPage = () => {
     }
   }, []);
   return (
-    <Grid container xs={12} xl={12} mt={isMobileDevice ? "25%" : 0}>
+    <Grid container>
       <Grid item xs={12} xl={12} marginTop={"5%"} textAlign={"center"}>
         <Typography className="title">{t("restiamo-in-contatto")}</Typography>
         <Typography

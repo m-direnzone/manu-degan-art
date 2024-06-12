@@ -25,23 +25,49 @@ const PaintDetail = ({
 }: PaintDetailProps) => {
   return (
     <div className="paint-container">
+      <div className="paint-number-info">
+        <Typography className="small-title">
+          {currentPaint} / {allPaintsLenght}
+        </Typography>
+      </div>
       <IconButton onClick={onClose} className="paint-detail-close-button">
         <CloseIcon className="paint-detail-close-icon" />
       </IconButton>
       <div className="paint-detail-container">
-        <IconButton
-          onClick={backToPreviousImage}
-          className="paint-detail-back-button"
+        {currentPaint !== 1 && (
+          <IconButton
+            onClick={backToPreviousImage}
+            className="paint-detail-back-button"
+          >
+            <ArrowBackIosNewIcon className="paint-detail-back-icon" />
+          </IconButton>
+        )}
+        <div
+          className="paint-detail-image-container"
+          style={{
+            marginLeft:
+              currentPaint === 1 && isMobile
+                ? "10%"
+                : currentPaint === 1
+                ? "30%"
+                : "auto",
+            marginRight:
+              currentPaint === allPaintsLenght && isMobile
+                ? "13%"
+                : currentPaint === allPaintsLenght
+                ? "auto"
+                : "auto",
+          }}
         >
-          <ArrowBackIosNewIcon className="paint-detail-back-icon" />
-        </IconButton>
-        <div className="paint-detail-image-container">
           <img
             src={paint.src}
             alt=""
             height={isMobile ? paint.mobileHeight : paint.height}
             width={isMobile ? paint.mobileWidth : paint.width}
-            style={{ borderRadius: "5px", marginLeft: isMobile ? "12%" : 0 }}
+            style={{
+              borderRadius: "5px",
+              marginLeft: isMobile ? "12%" : 0,
+            }}
           />
           <div className="paint-detail-description-container">
             <Typography className="small-title">{paint.title}</Typography>
@@ -52,12 +78,14 @@ const PaintDetail = ({
             </div>
           </div>
         </div>
-        <IconButton
-          onClick={goToNextImage}
-          className="paint-detail-next-button"
-        >
-          <ArrowForwardIosIcon className="paint-detail-next-icon" />
-        </IconButton>
+        {currentPaint !== allPaintsLenght && (
+          <IconButton
+            onClick={goToNextImage}
+            className="paint-detail-next-button"
+          >
+            <ArrowForwardIosIcon className="paint-detail-next-icon" />
+          </IconButton>
+        )}
       </div>
     </div>
   );

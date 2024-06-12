@@ -73,7 +73,7 @@ const GalleryPage = () => {
                   >
                     {paints.map((paint, index) => (
                       <ImageListItem
-                        key={paint.src}
+                        key={paint.id}
                         className="paint-item"
                         onClick={() => handleClick(index)}
                       >

@@ -5,6 +5,7 @@ export interface Article {
 }
 
 export interface Paint {
+  id: number;
   src: string;
   title: string;
   description: string;
