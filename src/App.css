@@ -260,6 +260,10 @@
   display: none;
 }
 
+.paint-item:hover {
+  cursor: pointer;
+}
+
 .paint-item:hover .paint-item-info {
   display: block;
 }
