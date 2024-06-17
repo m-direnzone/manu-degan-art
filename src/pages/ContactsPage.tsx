@@ -90,7 +90,7 @@ const ContactsPage = () => {
             style={{
               margin: "5% auto",
               marginTop: isMobileDevice ? "10%" : "5%",
-              marginLeft: isMobileDevice ? "27%" : 0,
+              marginLeft: isMobileDevice ? "27%" : "auto",
               width: 200,
               backgroundColor: "#b0a300",
             }}
