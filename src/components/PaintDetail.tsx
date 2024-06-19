@@ -47,16 +47,12 @@ const PaintDetail = ({
           style={{
             marginLeft:
               currentPaint === 1 && isMobile
-                ? "10%"
+                ? "18.5%"
                 : currentPaint === 1
-                ? "30%"
+                ? "26.5%"
                 : "auto",
             marginRight:
-              currentPaint === allPaintsLenght && isMobile
-                ? "13%"
-                : currentPaint === allPaintsLenght
-                ? "auto"
-                : "auto",
+              currentPaint === allPaintsLenght && isMobile ? "13%" : "auto",
           }}
         >
           <img
@@ -66,7 +62,17 @@ const PaintDetail = ({
             width={isMobile ? paint.mobileWidth : paint.width}
             style={{
               borderRadius: "5px",
-              marginLeft: isMobile ? "12%" : 0,
+              marginLeft:
+                currentPaint === 1 && isMobile
+                  ? 0
+                  : (currentPaint === 7 || currentPaint === allPaintsLenght) &&
+                    isMobile
+                  ? "5%"
+                  : currentPaint === 9 && isMobile
+                  ? "8%"
+                  : isMobile
+                  ? "1%"
+                  : 0,
             }}
           />
           <div className="paint-detail-description-container">
