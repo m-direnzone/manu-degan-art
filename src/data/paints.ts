@@ -9,6 +9,7 @@ import occhiDiLuna from "../images/occhi di luna.jpg";
 import dolceSguardo from "../images/dolce sguardo.jpg";
 import falconeBorsellino from "../images/disegno falcone borsellino 2022.jpg";
 import ofelia from "../images/Ofelia 2022.jpg";
+import ariaDiLiberta from "../images/aria di libertà tratteggio grafite 24x33 2019.jpg";
 
 export const paints: Paint[] = [
   {
@@ -126,6 +127,18 @@ export const paints: Paint[] = [
     description: "Matita a pastello e graffi di chiodo su mdf",
     paintSize: "70 x 100 cm",
     year: 2022,
+    height: 650,
+    width: 450,
+    mobileHeight: 400,
+    mobileWidth: 250,
+  },
+  {
+    id: 11,
+    src: ariaDiLiberta,
+    title: "Aria di Libertà",
+    description: "Grafite",
+    paintSize: "25 x 33 cm",
+    year: 2018,
     height: 650,
     width: 450,
     mobileHeight: 400,

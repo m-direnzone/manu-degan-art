@@ -50,9 +50,9 @@ const BiographyPage = () => {
             <br /> 2021 - {t("arte-e-natura")}
             Campugliano (Pt) <strong>3° {t("posto")}</strong>, {t("penna-biro")}
             . <br /> 2021 - {t("premio-giovanni-de-nittis")}. <br /> 2022 -{" "}
-            {t("premio-Internazionale")} “Art work” IV
+            {t("premio-internazionale")} “Art work” IV
             {t("edizione")} {t("firenze")} <strong>2° {t("posto")}</strong>,{" "}
-            {t("volare-via")}. <br /> 2022 -{t("premio-internazionale")}{" "}
+            {t("volare-via")}. <br /> 2022 - {t("premio-internazionale")}{" "}
             {t("nuovi-occhi-sul-mugello-titolo")} {t("firenze")}{" "}
             <strong>3° {t("posto")}</strong>, {t("angelo-di-luce")}. <br /> 2023
             - IX {t("premio-internazionale")}
@@ -84,15 +84,15 @@ const BiographyPage = () => {
           </Typography>
           <Typography className="paragraph" mt={"0.5%"}>
             2021 - {t("ombra-della-tenda")} <br />
-            2022 - {t("matite-forma-e-anima")} {t("firenze")} <br /> 2022 -
+            2022 - {t("matite-forma-e-anima")} {t("firenze")} <br /> 2022 -{" "}
             {t("birreria-mostodolce")}. <br />
             2022 - {t("giornata-contro-violenza-di-genere")} <br />
             2023 - {t("spazio-espositivo")} {t("firenze")}
             {t("in-punta-di-matita")}. <br />
-            2023 - {t("mostra-jb7jazz")} {t("firenze")}. <br /> 2023 -
-            {"mostra-personale"}
+            2023 - {t("mostra-jb7jazz")} {t("firenze")}. <br /> 2023 -{" "}
+            {t("mostra-personale")}
             {t("firenze")} {t("il-filo-rosso")}.
-            <br /> 2023 - {t("negli-occhi-di-una-donna")}. <br /> 2024 -
+            <br /> 2023 - {t("negli-occhi-di-una-donna")}. <br /> 2024 -{" "}
             {t("venezia-in-maschera")}.
             <br /> 2024 - Vernice Art Fair Forlì, {t("fiera")}.
           </Typography>

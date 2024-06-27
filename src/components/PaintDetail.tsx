@@ -50,9 +50,15 @@ const PaintDetail = ({
                 ? "18.5%"
                 : currentPaint === 1
                 ? "26.5%"
+                : currentPaint === 10 && isMobile
+                ? "9%"
                 : "auto",
             marginRight:
-              currentPaint === allPaintsLenght && isMobile ? "13%" : "auto",
+              currentPaint === allPaintsLenght && isMobile
+                ? "20%"
+                : currentPaint === allPaintsLenght
+                ? "37%"
+                : "auto",
           }}
         >
           <img
