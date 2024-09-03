@@ -58,7 +58,7 @@ const GalleryPage = () => {
                 <Box
                   sx={{
                     width: "100%",
-                    height: isMobileDevice ? "100%" : 850,
+                    height: isMobileDevice ? "100%" : 1060,
                     overflowY: "scroll",
                   }}
                 >
