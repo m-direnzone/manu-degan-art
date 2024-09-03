@@ -34,33 +34,19 @@ const PaintDetail = ({
         <CloseIcon className="paint-detail-close-icon" />
       </IconButton>
       <div className="paint-detail-container">
-        {currentPaint !== 1 && (
-          <IconButton
-            onClick={backToPreviousImage}
-            className="paint-detail-back-button"
-          >
-            <ArrowBackIosNewIcon className="paint-detail-back-icon" />
-          </IconButton>
-        )}
-        <div
-          className="paint-detail-image-container"
+        <IconButton
+          onClick={backToPreviousImage}
+          className="paint-detail-back-button"
           style={{
-            marginLeft:
-              currentPaint === 1 && isMobile
-                ? "18.5%"
-                : currentPaint === 1
-                ? "26.5%"
-                : currentPaint === 10 && isMobile
-                ? "9%"
-                : "auto",
-            marginRight:
-              currentPaint === allPaintsLenght && isMobile
-                ? "20%"
-                : currentPaint === allPaintsLenght
-                ? "37%"
-                : "auto",
+            backgroundColor: currentPaint !== 1 ? "#c1c1c1" : "transparent",
           }}
+          disabled={currentPaint === 1}
         >
+          {currentPaint !== 1 && (
+            <ArrowBackIosNewIcon className="paint-detail-back-icon" />
+          )}
+        </IconButton>
+        <div className="paint-detail-image-container">
           <img
             src={paint.src}
             alt=""
@@ -68,17 +54,6 @@ const PaintDetail = ({
             width={isMobile ? paint.mobileWidth : paint.width}
             style={{
               borderRadius: "5px",
-              marginLeft:
-                currentPaint === 1 && isMobile
-                  ? 0
-                  : (currentPaint === 7 || currentPaint === allPaintsLenght) &&
-                    isMobile
-                  ? "5%"
-                  : currentPaint === 9 && isMobile
-                  ? "8%"
-                  : isMobile
-                  ? "1%"
-                  : 0,
             }}
           />
           <div className="paint-detail-description-container">
@@ -90,14 +65,19 @@ const PaintDetail = ({
             </div>
           </div>
         </div>
-        {currentPaint !== allPaintsLenght && (
-          <IconButton
-            onClick={goToNextImage}
-            className="paint-detail-next-button"
-          >
+        <IconButton
+          onClick={goToNextImage}
+          className="paint-detail-next-button"
+          style={{
+            backgroundColor:
+              currentPaint !== allPaintsLenght ? "#c1c1c1" : "transparent",
+          }}
+          disabled={currentPaint === allPaintsLenght}
+        >
+          {currentPaint !== allPaintsLenght && (
             <ArrowForwardIosIcon className="paint-detail-next-icon" />
-          </IconButton>
-        )}
+          )}
+        </IconButton>
       </div>
     </div>
   );
