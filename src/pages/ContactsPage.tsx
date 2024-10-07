@@ -2,10 +2,51 @@ import { Button, Grid, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import { useTranslation } from "react-i18next";
+import emailjs from "@emailjs/browser";
 
 const ContactsPage = () => {
   const { t } = useTranslation();
   const [isMobileDevice, setIsMobileDevice] = useState(false);
+  useEffect(() => emailjs.init("5zmUZI03np7BMTLqk"), []);
+
+  const [emailObject, setEmailObject] = useState({
+    name: "",
+    surname: "",
+    object: "",
+    email: "",
+    message: "",
+  });
+
+  const onChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    fieldName: string
+  ) => {
+    setEmailObject({
+      ...emailObject,
+      [fieldName]: e.target.value,
+    });
+  };
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs
+      .send("contact_service", "contact_template", {
+        user_name: emailObject.name,
+        user_surname: emailObject.surname,
+        user_email: emailObject.email,
+        object: emailObject.object,
+        message: emailObject.message,
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
 
   useEffect(() => {
     if (isMobile || window.innerWidth <= 1050) {
@@ -14,7 +55,7 @@ const ContactsPage = () => {
   }, []);
   return (
     <Grid container>
-      <Grid item xs={12} xl={12} marginTop={"5%"} textAlign={"center"}>
+      <Grid item xs={12} xl={12} marginTop={"3%"} textAlign={"center"}>
         <Typography className="title">{t("restiamo-in-contatto")}</Typography>
         <Typography
           fontSize={isMobileDevice ? 16 : 20}
@@ -26,7 +67,7 @@ const ContactsPage = () => {
         </Typography>
       </Grid>
       <form
-        onSubmit={() => alert("CIAOOO")}
+        onSubmit={sendEmail}
         style={{ marginLeft: "10%", marginRight: isMobileDevice ? "10%" : 0 }}
       >
         <Grid
@@ -48,6 +89,7 @@ const ContactsPage = () => {
               label={t("nome")}
               type="text"
               required
+              onChange={(e) => onChange(e, "name")}
             />
           </Grid>
           <Grid item xl={6} xs={6}>
@@ -56,6 +98,7 @@ const ContactsPage = () => {
               label={t("cognome")}
               type="text"
               required
+              onChange={(e) => onChange(e, "surname")}
             />
           </Grid>
           <Grid item xl={6} xs={6}>
@@ -64,6 +107,7 @@ const ContactsPage = () => {
               label={t("oggetto")}
               type="text"
               required
+              onChange={(e) => onChange(e, "object")}
             />
           </Grid>
           <Grid item xl={6} xs={6}>
@@ -72,6 +116,7 @@ const ContactsPage = () => {
               label={"Email"}
               type="email"
               required
+              onChange={(e) => onChange(e, "email")}
             />
           </Grid>
           <Grid item xl={12} xs={12}>
@@ -82,6 +127,7 @@ const ContactsPage = () => {
               multiline
               minRows={6}
               required
+              onChange={(e) => onChange(e, "message")}
             />
           </Grid>
           <Button

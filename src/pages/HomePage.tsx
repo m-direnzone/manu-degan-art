@@ -34,16 +34,13 @@ const HomePage = () => {
             <YoutubeLink
               height={isMobileDevice ? "400px" : "600px"}
               width={"100%"}
-              videoId="sS0CDqpM9bY"
+              videoId="lzkc4Roc8gs"
             />
             <Typography className="small-title" marginTop={5}>
-              In punta di matita <br /> Emanuela Degan 12/02/2023
+              Mostra collettiva di arti visive CONTRASTI AL BRIZZOLARI
             </Typography>
             <Typography className="paragraph" mt={"3%"}>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Repudiandae, enim, aspernatur optio dolore pariatur eum ea
-              nesciunt inventore necessitatibus doloremque magnam quaerat omnis
-              veniam! Quas beatae quia quod voluptatum deleniti!
+              Mostra collettiva di arti visive CONTRASTI AL BRIZZOLARI
             </Typography>
           </Grid>
           <Grid
@@ -87,10 +84,7 @@ const HomePage = () => {
               Artebellariva Residenza d'Artista Emanuela Degan
             </Typography>
             <Typography className="paragraph" mt={"3%"}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-              ex doloribus dignissimos quibusdam placeat debitis sequi nulla
-              similique! Alias perspiciatis qui debitis unde ducimus quae
-              facilis vitae non maiores quam?
+              Artebellariva Residenza d'Artista Emanuela Degan
             </Typography>
           </Grid>
         </Grid>

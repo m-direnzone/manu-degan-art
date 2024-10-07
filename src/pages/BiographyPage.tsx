@@ -2,7 +2,7 @@ import { Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { isMobile } from "react-device-detect";
-import fotoRitratto from "../images/artist-painting-studio.jpg";
+import fotoRitratto from "../images/sfondoBiografia.jpg";
 
 const BiographyPage = () => {
   const { t } = useTranslation();
@@ -55,8 +55,8 @@ const BiographyPage = () => {
             {t("volare-via")}. <br /> 2022 - {t("premio-internazionale")}{" "}
             {t("nuovi-occhi-sul-mugello-titolo")} {t("firenze")}{" "}
             <strong>3° {t("posto")}</strong>, {t("angelo-di-luce")}. <br /> 2023
-            - IX {t("premio-internazionale")}
-            Acipea, {t("premio-san-valentino")}. <br /> 2023 - 55°{" "}
+            - IX {t("premio-internazionale")} Acipea,{" "}
+            {t("premio-san-valentino")}. <br /> 2023 - 55°{" "}
             {t("premio-enrico-caruso")} <br />
             {t("carta-modigliani")}, 100 x 70 cm
           </Typography>
