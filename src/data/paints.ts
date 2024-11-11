@@ -33,6 +33,7 @@ import lol_3924 from "../images/LOL_3924.jpg";
 import lol_3926 from "../images/LOL_3926.jpg";
 import menzioneAlMerito from "../images/menzioneAlMerito2024.jpg";
 import terraLontana from "../images/terra lontana per ponte vecchio 2024 bu.jpg";
+import unaGiornataTranquilla from "../images/una giornata tranquilla.jpg";
 
 export const paints: Paint[] = [
   {
@@ -386,7 +387,7 @@ export const paints: Paint[] = [
   {
     id: 30,
     src: n201920202021mas,
-    title: "#2019#2020#2021 mas",
+    title: "#2019#2020#2021",
     description: "Matite a cera su carta colorata",
     paintSize: "50 x 70 cm",
     year: 2022,
@@ -398,7 +399,7 @@ export const paints: Paint[] = [
   {
     id: 31,
     src: lol_3924,
-    title: "LOL_3924",
+    title: "New Ginger Heads",
     description: "Matite a cera su carta colorata",
     paintSize: "50 x 70 cm",
     year: 2022,
@@ -410,7 +411,7 @@ export const paints: Paint[] = [
   {
     id: 32,
     src: lol_3926,
-    title: "LOL_3926",
+    title: "New Ginger Heads",
     description: "Matite a cera su carta colorata",
     paintSize: "50 x 70 cm",
     year: 2022,
@@ -422,8 +423,8 @@ export const paints: Paint[] = [
   {
     id: 33,
     src: menzioneAlMerito,
-    title: "Menzione al merito “Un anomalo Dante e la diavolessa”",
-    description: "IX concorso Nazionale Ponte Vecchio 2024. Cera su carta",
+    title: "New Ginger Heads",
+    description: "Matite a cera su carta colorata",
     paintSize: "50 x 70 cm",
     year: 2024,
     height: 650,
@@ -439,6 +440,19 @@ export const paints: Paint[] = [
       "IX concorso Nazionale Ponte Vecchio 2024. Pastello e acrilico su carta",
     paintSize: "70 x 50 cm",
     year: 2022,
+    height: 600,
+    width: 800,
+    mobileHeight: 200,
+    mobileWidth: 250,
+  },
+  {
+    id: 35,
+    src: unaGiornataTranquilla,
+    title: "Una Giornata Tranquilla",
+    description:
+      "210° anniversario della formazione dell'arma dei Carabinieri. Pastello su carta",
+    paintSize: "70 x 100 cm",
+    year: 2024,
     height: 600,
     width: 800,
     mobileHeight: 200,
