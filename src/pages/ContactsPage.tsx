@@ -3,17 +3,26 @@ import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
+import Loader from "../components/Loader";
 
 const ContactsPage = () => {
   const { t } = useTranslation();
   const [isMobileDevice, setIsMobileDevice] = useState(false);
-  useEffect(() => emailjs.init("5zmUZI03np7BMTLqk"), []);
+  const [isLoading, setIsLoading] = useState(false);
+  
+  useEffect(() => {
+    emailjs.init("39Dc7AOqs_lNovnAV")
+    if (isMobile || window.innerWidth <= 1050) {
+      setIsMobileDevice(true);
+    }
+  }, []);
+
 
   const [emailObject, setEmailObject] = useState({
-    name: "",
-    surname: "",
-    object: "",
-    email: "",
+    user_name: "",
+    user_surname: "",
+    subject: "",
+    user_email: "",
     message: "",
   });
 
@@ -29,13 +38,13 @@ const ContactsPage = () => {
 
   const sendEmail = (e: any) => {
     e.preventDefault();
-
+    setIsLoading(true);
     emailjs
-      .send("contact_service", "contact_template", {
-        user_name: emailObject.name,
-        user_surname: emailObject.surname,
-        user_email: emailObject.email,
-        object: emailObject.object,
+      .send("manu_degan_art_service", "manu_degan_art_template", {
+        user_name: emailObject.user_name,
+        user_surname: emailObject.user_surname,
+        user_email: emailObject.user_email,
+        object: emailObject.subject,
         message: emailObject.message,
       })
       .then(
@@ -45,14 +54,18 @@ const ContactsPage = () => {
         (error) => {
           console.log("FAILED...", error.text);
         }
-      );
+      ).finally(()=>{
+        setEmailObject({
+          user_name: "",
+          user_surname: "",
+          subject: "",
+          user_email: "",
+          message: "",
+        })
+        setIsLoading(false);
+      });
   };
 
-  useEffect(() => {
-    if (isMobile || window.innerWidth <= 1050) {
-      setIsMobileDevice(true);
-    }
-  }, []);
   return (
     <Grid container>
       <Grid item xs={12} xl={12} marginTop={"3%"} textAlign={"center"}>
@@ -76,7 +89,7 @@ const ContactsPage = () => {
           xl={12}
           mt={isMobileDevice ? "10%" : "3%"}
           mb={isMobileDevice ? "5%" : "2%"}
-          marginLeft={isMobileDevice ? "45%" : 0}
+          marginLeft= {isMobileDevice ? "30%" : 0}
         >
           <Typography className="small-title" textAlign={"right"}>
             * {t("campi-obbligatori")}
@@ -89,7 +102,7 @@ const ContactsPage = () => {
               label={t("nome")}
               type="text"
               required
-              onChange={(e) => onChange(e, "name")}
+              onChange={(e) => onChange(e, "user_name")}
             />
           </Grid>
           <Grid item xl={6} xs={6}>
@@ -98,7 +111,7 @@ const ContactsPage = () => {
               label={t("cognome")}
               type="text"
               required
-              onChange={(e) => onChange(e, "surname")}
+              onChange={(e) => onChange(e, "user_surname")}
             />
           </Grid>
           <Grid item xl={6} xs={6}>
@@ -107,7 +120,7 @@ const ContactsPage = () => {
               label={t("oggetto")}
               type="text"
               required
-              onChange={(e) => onChange(e, "object")}
+              onChange={(e) => onChange(e, "subject")}
             />
           </Grid>
           <Grid item xl={6} xs={6}>
@@ -116,7 +129,7 @@ const ContactsPage = () => {
               label={"Email"}
               type="email"
               required
-              onChange={(e) => onChange(e, "email")}
+              onChange={(e) => onChange(e, "user_email")}
             />
           </Grid>
           <Grid item xl={12} xs={12}>
@@ -133,6 +146,7 @@ const ContactsPage = () => {
           <Button
             variant="contained"
             type="submit"
+            disabled={isLoading}
             style={{
               margin: "5% auto",
               marginTop: isMobileDevice ? "10%" : "5%",
@@ -141,7 +155,9 @@ const ContactsPage = () => {
               backgroundColor: "#b0a300",
             }}
           >
-            {t("invia")}
+            {isLoading ? (
+                <Loader/>
+            ):(<>{t("invia")}</>)}
           </Button>
         </Grid>
       </form>

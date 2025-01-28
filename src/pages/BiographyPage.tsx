@@ -113,6 +113,8 @@ const BiographyPage = () => {
             <br /> 2023 - {t("negli-occhi-di-una-donna")}. <br /> 2024 -{" "}
             {t("venezia-in-maschera")}.
             <br /> 2024 - Vernice Art Fair Forlì, {t("fiera")}.
+            <br /> 2024 - {t("mostra-personale-galluzzo")}. <br /> 2024 -{" "}
+            {t("brizzolari-2024")}
           </Typography>
         </Grid>
       </Grid>

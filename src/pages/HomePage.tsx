@@ -101,7 +101,7 @@ const HomePage = () => {
         <Carousel
           interval={5000}
           duration={1000}
-          sx={{ marginBottom: isMobileDevice ? 3 : 0 }}
+          sx={{ marginBottom: isMobileDevice ? 3 : 0, zIndex: -100 }}
         >
           {articles.map((article) => (
             <ArticleCard article={article} />

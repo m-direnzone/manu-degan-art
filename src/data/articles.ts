@@ -4,7 +4,7 @@ export const articles: Article[] = [
   {
     title: "In punta di matita, L'arte al femminile di Emanuela Degan",
     preview:
-      'Si intitola "In punta di matita" la mostra di Emanuela Degan che sarà inaugurata, oggi alle 12,30, allo "Spazio delle arti La Soffitta" all’interno dell’Unione operaia di Colonnata in piazza Rapisardi 6.a rassegna accoglie opere dell’artista, veneziana di nascita e ritrattista esperta, che sceglie di esprimersi utilizzando graffi, righe, moltitudini di linee che si accavallano fra loro per creare un’immagine, prevalentemente femminile...',
+      'Si intitola "In punta di matita" la mostra di Emanuela Degan che sarà inaugurata, oggi alle 12,30, allo "Spazio delle arti La Soffitta" all’interno dell’Unione operaia di Colonnata in piazza Rapisardi 6.a rassegna accoglie opere dell’artista, veneziana di nascita e ritrattista esperta...',
     link: "https://www.lanazione.it/firenze/cronaca/in-punta-di-matita-larte-al-femminile-di-emanuela-degan-89a7b296",
   },
   {
