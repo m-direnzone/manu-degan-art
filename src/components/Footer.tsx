@@ -3,12 +3,11 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { isMobile } from "react-device-detect";
 
 const Footer = () => {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
   useEffect(() => {
-    if (isMobile || window.innerWidth <= 1050) {
+    if (window.innerWidth <= 1024) {
       setIsMobileDevice(true);
     }
   }, []);

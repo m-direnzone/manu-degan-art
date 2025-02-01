@@ -1,6 +1,5 @@
 import { Button, Grid, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { isMobile } from "react-device-detect";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
 import Loader from "../components/Loader";
@@ -8,12 +7,17 @@ import Loader from "../components/Loader";
 const ContactsPage = () => {
   const { t } = useTranslation();
   const [isMobileDevice, setIsMobileDevice] = useState(false);
+  const [isSmallLaptop, setIsSmallLaptop] = useState(false)
   const [isLoading, setIsLoading] = useState(false);
   
   useEffect(() => {
     emailjs.init("39Dc7AOqs_lNovnAV")
-    if (isMobile || window.innerWidth <= 1050) {
+    if (window.innerWidth <= 1024) {
       setIsMobileDevice(true);
+    }
+
+    if(window.innerWidth > 1300 && window.innerWidth < 1500) {
+      setIsSmallLaptop(true)
     }
   }, []);
 
@@ -81,7 +85,7 @@ const ContactsPage = () => {
       </Grid>
       <form
         onSubmit={sendEmail}
-        style={{ marginLeft: "10%", marginRight: isMobileDevice ? "10%" : 0 }}
+        style={{ marginLeft: "10%", marginRight: isMobileDevice ? "10%" : isSmallLaptop ? "8%" : 0 }}
       >
         <Grid
           item

@@ -12,7 +12,6 @@ import PaintDetail from "../components/PaintDetail";
 import Navbar from "../components/Navbar";
 import { MobileMenu } from "../components/MobileMenu";
 import Footer from "../components/Footer";
-import { isMobile } from "react-device-detect";
 
 const GalleryPage = () => {
   const { t } = useTranslation();
@@ -21,7 +20,7 @@ const GalleryPage = () => {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
 
   useEffect(() => {
-    if (isMobile || window.innerWidth <= 1050) {
+    if (window.innerWidth <= 1024) {
       setIsMobileDevice(true);
     }
   }, []);

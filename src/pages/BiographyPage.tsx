@@ -1,24 +1,28 @@
 import { Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { isMobile } from "react-device-detect";
 import fotoRitratto from "../images/sfondoBiografia.jpg";
 import riconoscimentoCarabinieri from "../images/riconoscimentoCarabinieri.jpg";
 
 const BiographyPage = () => {
   const { t } = useTranslation();
   const [isMobileDevice, setIsMobileDevice] = useState(false);
+  const [isSmallLaptop, setIsSmallLaptop] = useState(false)
 
   useEffect(() => {
-    if (isMobile || window.innerWidth <= 1050) {
+    if (window.innerWidth <= 1024) {
       setIsMobileDevice(true);
+    }
+
+    if(window.innerWidth > 1300 && window.innerWidth < 1500) {
+      setIsSmallLaptop(true)
     }
   }, []);
 
   return (
     <div>
       <Grid container px={isMobileDevice ? "6%" : "2%"} py={"4%"}>
-        <Grid item xs={12} xl={7}>
+        <Grid item xs={isSmallLaptop ? 7 : 12} xl={7}>
           <Typography className="title">{t("la-mia-storia")}</Typography>
           {isMobileDevice && (
             <img src={fotoRitratto} alt="" className="biography-image" />
@@ -29,7 +33,7 @@ const BiographyPage = () => {
           </Typography>
         </Grid>
         {!isMobileDevice && (
-          <Grid item xl={5}>
+          <Grid item xl={5} marginTop={isSmallLaptop ? "10%" : 0}>
             <img src={fotoRitratto} alt="" className="biography-image" />
           </Grid>
         )}
@@ -41,7 +45,7 @@ const BiographyPage = () => {
           >
             {t("titolo-sezione-premi")}
           </Typography>
-          <Grid item xs={12} xl={9}>
+          <Grid item xs={isSmallLaptop ? 9 : 12} xl={9}>
             <Typography className="paragraph" mt={"0.5%"}>
               2018 - 3° {t("edizione")} Premio Claudio Cavallini Kevo.{" "}
               <strong>3° {t("posto")}</strong>, {t("sguardo-dolce")}. <br />{" "}
@@ -71,7 +75,7 @@ const BiographyPage = () => {
               2024 - {t("menzione-al-merito")}
             </Typography>
           </Grid>
-          <Grid item xs={12} xl={3}>
+          <Grid item xs={isSmallLaptop ? 3 : 12} xl={3} marginTop={isSmallLaptop ? "2.5%" : 0}>
             <img
               src={riconoscimentoCarabinieri}
               alt=""

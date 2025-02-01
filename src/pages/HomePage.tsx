@@ -5,14 +5,19 @@ import { articles } from "../data/articles";
 import ArticleCard from "../components/ArticleCard";
 import Carousel from "react-material-ui-carousel";
 import { useEffect, useState } from "react";
-import { isMobile } from "react-device-detect";
 
 const HomePage = () => {
   const { t } = useTranslation();
   const [isMobileDevice, setIsMobileDevice] = useState(false);
+  const [isSmallLaptop, setIsSmallLaptop] = useState(false)
+
   useEffect(() => {
-    if (isMobile || window.innerWidth <= 1050) {
+    if (window.innerWidth <= 1024) {
       setIsMobileDevice(true);
+    }
+    
+    if(window.innerWidth > 1300 && window.innerWidth < 1500) {
+      setIsSmallLaptop(true)
     }
   }, []);
 
@@ -27,7 +32,7 @@ const HomePage = () => {
           <Grid
             item
             xl={3}
-            xs={9}
+            xs={isSmallLaptop ? 3 : 9}
             mx={isMobileDevice ? "auto" : 0}
             mb={isMobileDevice ? 4 : 0}
           >
@@ -46,7 +51,7 @@ const HomePage = () => {
           <Grid
             item
             xl={6}
-            xs={9}
+            xs={isSmallLaptop ? 6 : 9}
             mx={isMobileDevice ? "auto" : 0}
             mb={isMobileDevice ? 4 : 0}
           >
@@ -71,7 +76,7 @@ const HomePage = () => {
           <Grid
             item
             xl={3}
-            xs={9}
+            xs={isSmallLaptop ? 3 : 9}
             mx={isMobileDevice ? "auto" : 0}
             mb={isMobileDevice ? 4 : 0}
           >
