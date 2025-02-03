@@ -1,6 +1,10 @@
 import { CircularProgress, Grid } from "@mui/material";
 
-const Loader = () => {
+interface LoaderProps {
+  color?: string
+}
+
+const Loader = ({color}: LoaderProps) => {
   return (
     <Grid container height={"100%"} py={1}>
       <Grid item xs={5} xl={5} />
@@ -9,7 +13,7 @@ const Loader = () => {
           size={30}
           sx={{
             alignSelf: "center",
-            color: "white"
+            color: color ? color : "white"
           }}
         />
       </Grid>

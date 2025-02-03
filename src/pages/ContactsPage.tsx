@@ -7,7 +7,7 @@ import Loader from "../components/Loader";
 const ContactsPage = () => {
   const { t } = useTranslation();
   const [isMobileDevice, setIsMobileDevice] = useState(false);
-  const [isSmallLaptop, setIsSmallLaptop] = useState(false)
+  const [isSmallLaptop, setIsSmallLaptop] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   
   useEffect(() => {
