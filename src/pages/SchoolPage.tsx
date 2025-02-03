@@ -30,19 +30,10 @@ const SchoolPage = () => {
           )}
           <Typography className="small-title">{t("corsi-disegno")}</Typography>
           <Typography className="paragraph" mt={"3%"}>
-            - Dal 2018 al 2020 corso di disegno base partendo dalle grafiti e
-            proseguendo con tecniche varie presso il museo “Casa natale di
-            Giotto” a Vespignano Vicchio, Firenze. <br />
+            - {t("corso-2018/2020")} <br />
             <br />
-            - Dal 2022 è sempre in essere il corso di disegno base e di 1° e 2°
-            livello. Disegno dal vero di oggetti con prospettiva partendo dalle
-            grafiti e proseguendo con utilizzo di tecniche varie, disegno del
-            corpo umano in collaborazione con l’Associazione Live Art presso il
-            teatro Microscena a Borgo San Lorenzo Firenze <br /> <br />- 2023
-            viene chiamata ad esperienza di centri estivi con un proprio
-            progetto sul cerchio cromatico con bambini dai 6 ai 12 anni. <br />
-            <br />- 2024 in concomitanza con una mostra personale, corso di
-            disegno base gratuito, presso la biblioteca del Galluzzo, Firenze.
+            - {t("corso-2022")} <br /> <br />- {t("corso-2023")} <br />
+            <br />- {t("corso-2024")}
           </Typography>
           <Button
             variant="contained"
