@@ -3,6 +3,7 @@ import { Paint } from "../interface";
 import CloseIcon from "@mui/icons-material/Close";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 interface PaintDetailProps {
   paint: Paint;
@@ -33,7 +34,8 @@ const PaintDetail = ({
       <IconButton onClick={onClose} className="paint-detail-close-button">
         <CloseIcon className="paint-detail-close-icon" />
       </IconButton>
-      <div className="paint-detail-container">
+      <div className="paint-detail-container" style={{
+        marginTop: isMobile ? 0 : "5%"    }}>
         <IconButton
           onClick={backToPreviousImage}
           className="paint-detail-back-button"
@@ -47,7 +49,7 @@ const PaintDetail = ({
           )}
         </IconButton>
         <div className="paint-detail-image-container">
-          <img
+          <LazyLoadImage
             src={paint.src}
             alt=""
             height={isMobile ? paint.mobileHeight : paint.height}
@@ -55,6 +57,7 @@ const PaintDetail = ({
             style={{
               borderRadius: "5px",
             }}
+            effect="blur"
           />
           <div className="paint-detail-description-container">
             <Typography className="small-title">{paint.title}</Typography>
