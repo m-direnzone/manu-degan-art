@@ -6,7 +6,7 @@ import {
   ImageListItemBar,
   Typography,
 } from "@mui/material";
-import { Box, height } from "@mui/system";
+import { Box } from "@mui/system";
 import { useTranslation } from "react-i18next";
 import PaintDetail from "../components/PaintDetail";
 import Navbar from "../components/Navbar";
