@@ -24,11 +24,12 @@ const Footer = () => {
           <div className="mobile-footer-icon-container">
             <Link
               target="_blank"
+              rel="noopener noreferrer"
               to={"https://www.facebook.com/profile.php?id=100063579694918"}
             >
               <FacebookIcon className="footer-icon" />
             </Link>
-            <Link target="_blank" to={"https://www.instagram.com/manudeghi/"}>
+            <Link target="_blank" rel="noopener noreferrer" to={"https://www.instagram.com/manudeghi/"}>
               <InstagramIcon className="footer-icon" />
             </Link>
           </div>
@@ -54,7 +55,7 @@ const Footer = () => {
               </a>
             </Typography>
             <Typography>Designed and Created by {" "} 
-              <a href="https://www.linkedin.com/in/mattia-di-renzone-07b75b226/" target="_blank" style={{color: "white"}}>
+              <a href="https://www.linkedin.com/in/mattia-di-renzone-07b75b226/" target="_blank" rel="noopener noreferrer" style={{color: "white"}}>
               Mattia Di Renzone
               </a>
             </Typography>
@@ -86,18 +87,19 @@ const Footer = () => {
           <Typography marginTop={3}>|</Typography>
           <Typography marginTop={3}>
             Designed and Created by {" "} 
-            <a href="https://www.linkedin.com/in/mattia-di-renzone-07b75b226/" target="_blank" style={{color: "white"}}>
+            <a href="https://www.linkedin.com/in/mattia-di-renzone-07b75b226/" target="_blank" rel="noopener noreferrer" style={{color: "white"}}>
             Mattia Di Renzone
             </a>
           </Typography>
           <div className="footer-icon-container">
             <Link
               target="_blank"
+              rel="noopener noreferrer"
               to={"https://www.facebook.com/profile.php?id=100063579694918"}
             >
               <FacebookIcon className="footer-icon" />
             </Link>
-            <Link target="_blank" to={"https://www.instagram.com/manudeghi/"}>
+            <Link target="_blank" rel="noopener noreferrer" to={"https://www.instagram.com/manudeghi/"}>
               <InstagramIcon className="footer-icon" />
             </Link>
           </div>
