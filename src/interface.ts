@@ -16,3 +16,5 @@ export interface Paint {
   mobileHeight: number;
   mobileWidth: number;
 }
+
+export type PageType = 'home' | 'biografia' | 'galleria' | 'scuola' | 'contatti';
