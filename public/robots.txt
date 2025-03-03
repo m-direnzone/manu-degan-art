@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://manu-degan-art.web.app/sitemap.xml
+Sitemap: https://deganarte.com/sitemap.xml

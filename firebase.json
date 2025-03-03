@@ -1,15 +1,25 @@
 {
   "hosting": {
-    "public": "build",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
+    "headers": [
+      {
+        "source": "/robots.txt",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex, nofollow"
+          }
+        ],
+        "allowedOrigins": [
+          "https://manu-degan-art.web.app",
+          "https://manu-degan-art.firebaseapp.com"
+        ]
+      }
     ],
-    "rewrites": [
+    "redirects": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "destination": "https://deganarte.com",
+        "type": 301
       }
     ]
   }
