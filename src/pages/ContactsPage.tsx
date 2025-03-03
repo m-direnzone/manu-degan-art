@@ -44,11 +44,11 @@ const ContactsPage = () => {
     e.preventDefault();
     setIsLoading(true);
     emailjs
-      .send("manu_degan_art_service", "manu_degan_art_template", {
+      .send("deganarte_SMTP_service", "deganarte_template", {
         user_name: emailObject.user_name,
         user_surname: emailObject.user_surname,
         user_email: emailObject.user_email,
-        object: emailObject.subject,
+        subject: emailObject.subject,
         message: emailObject.message,
       })
       .then(
