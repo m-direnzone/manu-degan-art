@@ -1,40 +1,27 @@
 {
-  "hosting": [
-    {
-      "target": "deganarte",
-      "public": "build",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "headers": [
-        {
-          "source": "/sitemap.xml",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "application/xml"
-            }
-          ]
-        }
-      ],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ]
-    },
-    {
-      "target": "firebaseapp-redirect",
-      "redirects": [
-        {
-          "source": "/**",
-          "destination": "https://deganarte.com",
-          "type": 301
-        }
-      ]
-    }
-  ]
+  "hosting": {
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "/sitemap.xml",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
 }

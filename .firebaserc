@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "manu-degan-art"
-  }
+  },
+  "targets": {
+    "manu-degan-art": {
+      "hosting": {
+        "firebaseapp-redirect": [
+          "manu-degan-art"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
