@@ -1,7 +1,7 @@
 {
   "biografia": "Biography",
   "galleria": "Gallery",
-  "scuola": "School",
+  "scuola": "Courses",
   "contatti": "Contacts",
   "titolo-youtube": "Interviews Viewable on Youtube",
   "leggi-di-piu": "Read more",
@@ -66,7 +66,7 @@
   "fiera": "fair",
   "linguaggio": "Language",
   "i-miei-lavori": "My Works",
-  "titolo-scuola": "School and Courses",
+  "titolo-scuola": "Courses and School",
   "corsi-disegno": "Drawing Courses",
   "richiedi-piu-informazioni": "more information",
   "premio-passione-innamorata": "“Valentine's Day Award” Avellino dedicated Prize, “Cupid” to the work “Passion In Love”",
@@ -77,5 +77,6 @@
   "corso-2018/2020": "From 2018 to 2020, basic drawing course starting with graphite and continuing with various techniques at the “Birthplace of Giotto” museum in Vespignano Vicchio, Florence.",
   "corso-2022": "Since 2022, the basic drawing course and the 1st and 2nd level courses have been ongoing. Drawing from life of objects with perspective, starting with graphite and continuing with various techniques, human figure drawing in collaboration with the Live Art Association at the Microscena Theater in Borgo San Lorenzo, Florence.",
   "corso-2023": "In 2023, she was invited to lead a summer camp experience with her own project on the color wheel for children aged 6 to 12.",
-  "corso-2024": "In conjunction with a solo exhibition, a free basic drawing course was held at the Galluzzo Library, Florence."
+  "corso-2024": "In conjunction with a solo exhibition, a free basic drawing course was held at the Galluzzo Library, Florence.",
+  "in-primo-piano": "About Me"
 }

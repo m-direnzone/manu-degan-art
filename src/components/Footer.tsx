@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
           <div className="mobile-footer-content-container">
             <Typography px={5}>
-              Ⓒ 2024 - Emanuela Degan - Italian Painter - All right reserved
+              Ⓒ 2025 - Emanuela Degan - Italian Painter - All right reserved
             </Typography>
             <Typography>
               <a

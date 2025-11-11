@@ -20,6 +20,17 @@
   list-style-type: none;
 }
 
+.header-title-container {
+  margin-bottom: 15px;
+  margin-left: 3%;
+  text-decoration: none;
+}
+
+.header-title {
+  font-size: 35px;
+  color: #b0a300;
+}
+
 .hamburger-menu-icon-button {
   margin-left: auto;
 }
@@ -252,14 +263,16 @@
 .biography-image {
   height: 850px;
   width: 550px;
-  margin-left: 20%;
+  margin: 0 auto;
+  display: block;
   border-radius: 10px;
 }
 
 .recognition-image {
   height: 500px;
   width: 350px;
-  margin-left: 15%;
+  margin: 0 auto;
+  display: block;
   border-radius: 10px;
 }
 
@@ -362,14 +375,12 @@
   .biography-image {
     height: 700px;
     width: 450px;
-    margin-left: 20%;
     border-radius: 10px;
   }
 
   .recognition-image {
     height: 450px;
     width: 300px;
-    margin-left: 15%;
     border-radius: 10px;
   }
 }
@@ -378,6 +389,10 @@
   .title {
     font-size: 30px;
     text-align: center;
+  }
+
+  .header-title {
+    font-size: 25px;
   }
 
   .small-title {
@@ -427,7 +442,6 @@
     height: 600px;
     width: 300px;
     margin-top: 5%;
-    margin-left: 2.5%;
     margin-bottom: 5%;
   }
 
@@ -435,7 +449,6 @@
     height: 400px;
     width: 300px;
     margin-top: 5%;
-    margin-left: 2.5%;
     margin-bottom: 2%;
   }
 

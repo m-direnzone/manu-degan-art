@@ -27,6 +27,9 @@ const Navbar = ({ onMobileMenuOpen }: NavbarProps) => {
 
   return (
     <div className="navbar-container">
+      <NavLink className={"header-title-container"} to={"/"}>
+        <Typography className="header-title">Emanuela Degan</Typography>
+      </NavLink>
       <IconButton
         onClick={onMobileMenuOpen}
         className="hamburger-menu-icon-button"
@@ -36,7 +39,7 @@ const Navbar = ({ onMobileMenuOpen }: NavbarProps) => {
       <ul className="navbar">
         <li>
           <NavLink className={"navlink"} to={"/"}>
-            <Typography className="link-text">Emanuela Degan</Typography>
+            <Typography className="link-text">{t("galleria")}</Typography>
           </NavLink>
         </li>
         <li>
@@ -45,14 +48,14 @@ const Navbar = ({ onMobileMenuOpen }: NavbarProps) => {
           </NavLink>
         </li>
         <li>
-          <NavLink className={"navlink"} to={"/gallery"}>
-            <Typography className="link-text">{t("galleria")}</Typography>
+          <NavLink className={"navlink"} to={"/about-me"}>
+            <Typography className="link-text">{t("in-primo-piano")}</Typography>
           </NavLink>
         </li>
 
         <li>
           <NavLink className={"navlink"} to={"/school"}>
-            <Typography className="link-text">{t("scuola")}</Typography>
+            <Typography className="link-text">{t("corsi")}</Typography>
           </NavLink>
         </li>
         <li>

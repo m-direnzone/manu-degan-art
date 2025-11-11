@@ -75,7 +75,7 @@ const BiographyPage = () => {
               2024 - {t("menzione-al-merito")}
             </Typography>
           </Grid>
-          <Grid item xs={isSmallLaptop ? 3 : 12} xl={3} marginTop={isSmallLaptop ? "2.5%" : 0}>
+          <Grid item xs={isSmallLaptop ? 3 : 12} xl={3} /*marginTop={isSmallLaptop ? "2.5%" : 0}*/>
             <img
               src={riconoscimentoCarabinieri}
               alt=""

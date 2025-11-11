@@ -38,10 +38,10 @@ const SchoolPage = () => {
           <Button
             variant="contained"
             type="submit"
+            className="more-info-button"
             style={{
-              marginTop: isMobileDevice ? "10%" : "15%",
-              marginLeft: isMobileDevice ? "12%" : "35%",
-              marginBottom: isMobileDevice ? "15%" : 0,
+              margin: "10% auto",
+              display: "block",
               width: isMobileDevice ? 250 : 300,
               padding: "2%",
               backgroundColor: "#b0a300",

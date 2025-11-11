@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <ScrollToTop />
-        <Home />
+        <Gallery />
       </>
     ),
   },
@@ -33,11 +33,11 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/gallery",
+    path: "/about-me",
     element: (
       <>
         <ScrollToTop />
-        <Gallery />
+        <Home />
       </>
     ),
   },
