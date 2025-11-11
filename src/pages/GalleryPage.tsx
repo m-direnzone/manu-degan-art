@@ -85,6 +85,8 @@ const GalleryPage = () => {
                             height: '100%',
                             objectFit: 'cover',
                           }}
+                          threshold={200}
+                          placeholder={<div className="skeleton" />}
                         />
                         <ImageListItemBar
                           className="paint-item-info"
