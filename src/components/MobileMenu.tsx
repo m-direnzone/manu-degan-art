@@ -32,19 +32,19 @@ export const MobileMenu = ({ onClose }: MobileMenuProps) => {
         <CloseIcon className="mobile-menu-close-icon" />
       </IconButton>
       <div className="mobile-menu">
-        <NavLink to={"/"} className="mobile-menu-link">
+        <NavLink to={"/"} rel="canonical" className="mobile-menu-link">
           <Typography className="mobile-menu-text">{t("galleria")}</Typography>
         </NavLink>
-        <NavLink to={"/biography"} className="mobile-menu-link">
+        <NavLink to={"/biography"} rel="canonical" className="mobile-menu-link">
           <Typography className="mobile-menu-text">{t("biografia")}</Typography>
         </NavLink>
-        <NavLink to={"/about-me"} className="mobile-menu-link">
+        <NavLink to={"/about-me"} rel="canonical" className="mobile-menu-link">
           <Typography className="mobile-menu-text">{t("in-primo-piano")}</Typography>
         </NavLink>
-        <NavLink to={"/school"} className="mobile-menu-link">
+        <NavLink to={"/school"} rel="canonical" className="mobile-menu-link">
           <Typography className="mobile-menu-text">{t("corsi")}</Typography>
         </NavLink>
-        <NavLink to={"/contacts"} className="mobile-menu-link">
+        <NavLink to={"/contacts"} rel="canonical" className="mobile-menu-link">
           <Typography className="mobile-menu-text">{t("contatti")}</Typography>
         </NavLink>
         <div className="mobile-language-selection">

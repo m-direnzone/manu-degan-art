@@ -27,7 +27,7 @@ const Navbar = ({ onMobileMenuOpen }: NavbarProps) => {
 
   return (
     <div className="navbar-container">
-      <NavLink className={"header-title-container"} to={"/"}>
+      <NavLink className={"header-title-container"} to={"/"} rel="canonical">
         <Typography className="header-title">Emanuela Degan</Typography>
       </NavLink>
       <IconButton
@@ -38,28 +38,28 @@ const Navbar = ({ onMobileMenuOpen }: NavbarProps) => {
       </IconButton>
       <ul className="navbar">
         <li>
-          <NavLink className={"navlink"} to={"/"}>
+          <NavLink className={"navlink"} to={"/"} rel="canonical">
             <Typography className="link-text">{t("galleria")}</Typography>
           </NavLink>
         </li>
         <li>
-          <NavLink className={"navlink"} to={"/biography"}>
+          <NavLink className={"navlink"} rel="canonical" to={"/biography"}>
             <Typography className="link-text">{t("biografia")}</Typography>
           </NavLink>
         </li>
         <li>
-          <NavLink className={"navlink"} to={"/about-me"}>
+          <NavLink className={"navlink"} rel="canonical" to={"/about-me"}>
             <Typography className="link-text">{t("in-primo-piano")}</Typography>
           </NavLink>
         </li>
 
         <li>
-          <NavLink className={"navlink"} to={"/school"}>
+          <NavLink className={"navlink"} rel="canonical" to={"/school"}>
             <Typography className="link-text">{t("corsi")}</Typography>
           </NavLink>
         </li>
         <li>
-          <NavLink className={"navlink"} to={"/contacts"}>
+          <NavLink className={"navlink"} rel="canonical" to={"/contacts"}>
             <Typography className="link-text">{t("contatti")}</Typography>
           </NavLink>
         </li>
