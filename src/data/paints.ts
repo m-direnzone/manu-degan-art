@@ -34,6 +34,10 @@ import lol_3926 from "../images/LOL_3926.jpg";
 import menzioneAlMerito from "../images/menzioneAlMerito2024.jpg";
 import terraLontana from "../images/terra lontana per ponte vecchio 2024 bu.jpg";
 import unaGiornataTranquilla from "../images/una giornata tranquilla.jpg";
+import inMedioStatVirtus from "../images/in Medio stat virtus LOL.jpg"
+import lunaTramontaSulMare from "../images/2025 La luna tramonta sul mare lo.jpg"
+import amoreUniversale from "../images/Amore Universale.jpg"
+import ilDoloreNegliOcchi from "../images/Il dolore negli occhi 2025.jpg"
 
 export const paints: Paint[] = [
   {
@@ -453,6 +457,58 @@ export const paints: Paint[] = [
       "210° anniversario della formazione dell'arma dei Carabinieri. Pastello su carta",
     paintSize: "100 x 70 cm",
     year: 2024,
+    height: 560,
+    width: 800,
+    mobileHeight: 175,
+    mobileWidth: 250,
+  },
+  {
+    id: 36,
+    src: inMedioStatVirtus,
+    title: "In Medio Stat Virtus",
+    description:
+      "tecnica mista cera e acrilico",
+    paintSize: "100 x 70 cm",
+    year: 2025,
+    height: 560,
+    width: 800,
+    mobileHeight: 175,
+    mobileWidth: 250,
+  },
+  {
+    id: 37,
+    src: lunaTramontaSulMare,
+    title: "La Luna tramonta sul mare",
+    description:
+      "tecnica mista pastello e acrilico",
+    paintSize: "100 x 70 cm",
+    year: 2025,
+    height: 560,
+    width: 800,
+    mobileHeight: 175,
+    mobileWidth: 250,
+  },
+  {
+    id: 38,
+    src: amoreUniversale,
+    title: "Amore Universale",
+    description:
+      "Matite",
+    paintSize: "40 x 30 cm",
+    year: 2025,
+    height: 488,
+    width: 650,
+    mobileHeight: 188,
+    mobileWidth: 250,
+  },
+  {
+    id: 39,
+    src: ilDoloreNegliOcchi,
+    title: "Il Dolore negli Occhi",
+    description:
+      "tecnica mista su cartone",
+    paintSize: "100 x 70 cm",
+    year: 2025,
     height: 560,
     width: 800,
     mobileHeight: 175,

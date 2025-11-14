@@ -31,8 +31,8 @@ const HomePage = () => {
           </Grid>
           <Grid
             item
-            xl={3}
-            xs={isSmallLaptop ? 3 : 9}
+            xl={4}
+            xs={isSmallLaptop ? 4 : 9}
             mx={isMobileDevice ? "auto" : 0}
             mb={isMobileDevice ? 4 : 0}
           >
@@ -50,33 +50,8 @@ const HomePage = () => {
           </Grid>
           <Grid
             item
-            xl={6}
-            xs={isSmallLaptop ? 6 : 9}
-            mx={isMobileDevice ? "auto" : 0}
-            mb={isMobileDevice ? 4 : 0}
-          >
-            <YoutubeLink
-              height={isMobileDevice ? "400px" : "600px"}
-              width={"100%"}
-              videoId="pr_WQy9DN1s"
-            />
-            <Typography className="small-title" marginTop={5}>
-              In punta di matita di Emanuela Degan {t("alla")} Soffitta Spazio
-              delle Arti {t("a")} Sesto Fiorentino
-            </Typography>
-            <Typography className="paragraph" mt={"3%"}>
-              In punta di matita di Emanuela Degan {t("alla")} Soffitta Spazio
-              delle Arti {t("a")} Sesto Fiorentino. Introduce Francesco Mariani{" "}
-              {t("della")} Soffitta Spazio delle Arti. Jacopo Madau{" "}
-              {t("assessore-alla-cultura")} Sesto Fiorentino. Lorenzo Pacini{" "}
-              {t("critico-arte")} {t("e")} Emanuela Degan{" "}
-              {t("pittrice-ritrattista")}
-            </Typography>
-          </Grid>
-          <Grid
-            item
-            xl={3}
-            xs={isSmallLaptop ? 3 : 9}
+            xl={4}
+            xs={isSmallLaptop ? 4 : 9}
             mx={isMobileDevice ? "auto" : 0}
             mb={isMobileDevice ? 4 : 0}
           >
@@ -90,6 +65,50 @@ const HomePage = () => {
             </Typography>
             <Typography className="paragraph" mt={"3%"}>
               Artebellariva Residenza d'Artista Emanuela Degan
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            xl={4}
+            xs={isSmallLaptop ? 4 : 9}
+            mx={isMobileDevice ? "auto" : 0}
+            mb={isMobileDevice ? 4 : 0}
+          >
+            <YoutubeLink
+              height={isMobileDevice ? "400px" : "600px"}
+              width={"100%"}
+              videoId="vfdyURxIM1c"
+            />
+            <Typography className="small-title" marginTop={5}>
+              Curatrice Mostra collettiva Contrasti al Brizzolari 2.0
+            </Typography>
+            <Typography className="paragraph" mt={"3%"}>
+              Curatrice Mostra collettiva Contrasti al Brizzolari 2.0
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            xl={10.5}
+            xs={isSmallLaptop ? 12 : 9}
+            mx={"auto"}
+            mb={isMobileDevice ? 4 : 0}
+          >
+            <YoutubeLink
+              height={isMobileDevice ? "400px" : "600px"}
+              width={"100%"}
+              videoId="pr_WQy9DN1s"
+            />
+            <Typography className="small-title" marginTop={5} textAlign={"center"}>
+              In punta di matita di Emanuela Degan {t("alla")} Soffitta Spazio
+              delle Arti {t("a")} Sesto Fiorentino
+            </Typography>
+            <Typography className="paragraph" mt={"3%"} textAlign={"center"}>
+              In punta di matita di Emanuela Degan {t("alla")} Soffitta Spazio
+              delle Arti {t("a")} Sesto Fiorentino. Introduce Francesco Mariani{" "}
+              {t("della")} Soffitta Spazio delle Arti. Jacopo Madau{" "}
+              {t("assessore-alla-cultura")} Sesto Fiorentino. Lorenzo Pacini{" "}
+              {t("critico-arte")} {t("e")} Emanuela Degan{" "}
+              {t("pittrice-ritrattista")}
             </Typography>
           </Grid>
         </Grid>

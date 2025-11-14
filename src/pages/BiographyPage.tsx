@@ -29,7 +29,8 @@ const BiographyPage = () => {
           )}
           <Typography className="paragraph" mt={"3%"}>
             {t("nascita-e-studi")} {t("vita-lontano-da-arte")}{" "}
-            {t("ripresa-attivita")} {t("stile-artistico-e-presente")}
+            {t("ripresa-attivita")} {t("stile-artistico-e-presente")} {" "}
+            {t("giurata-2025")}
           </Typography>
         </Grid>
         {!isMobileDevice && (
@@ -73,6 +74,9 @@ const BiographyPage = () => {
               <strong>2° {t("posto")}</strong>, “Hiroshima” <br />
               2024 - {t("premio-carabinieri")} <br />
               2024 - {t("menzione-al-merito")}
+              <br />
+              2025 - XI {t("edizione")} {t("premio-sv-avellino")} <strong>4° {t("posto")}</strong>, “Amore universale” <br />
+              2025 - X {t("edizione")} {t("concorso-letterario-ponte-vecchio")}, {t("mezione-eccellenza-opera")} “Intrigo”
             </Typography>
           </Grid>
           <Grid item xs={isSmallLaptop ? 3 : 12} xl={3} /*marginTop={isSmallLaptop ? "2.5%" : 0}*/>
@@ -117,8 +121,9 @@ const BiographyPage = () => {
             <br /> 2023 - {t("negli-occhi-di-una-donna")}. <br /> 2024 -{" "}
             {t("venezia-in-maschera")}.
             <br /> 2024 - Vernice Art Fair Forlì, {t("fiera")}.
-            <br /> 2024 - {t("mostra-personale-galluzzo")}. <br /> 2024 -{" "}
-            {t("brizzolari-2024")}
+            <br /> 2024 - {t("mostra-personale-galluzzo")}. <br />
+            2025 - {t("mostra-contro-violenze")} <br />
+            {t("brizzolari-2024")} 
           </Typography>
         </Grid>
       </Grid>
