@@ -17,10 +17,11 @@
         ]
       }
     ],
-    "rewrites": [
+    "redirects": [
       {
-        "source": "**",
-        "destination": "/index.html"
+        "source": "/**",
+        "destination": "https://deganarte.com",
+        "type": 301
       }
     ]
   }
