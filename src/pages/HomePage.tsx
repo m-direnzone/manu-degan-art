@@ -113,6 +113,61 @@ const HomePage = () => {
           </Grid>
         </Grid>
       </div>
+      <div style={{ marginTop: "5%", marginBottom: "2%" }}>
+        <Typography textAlign={"center"} className="title" mb={4}>
+          {t("dicono-titolo")}
+        </Typography>
+        <Grid 
+          container 
+          item 
+          xs={12} 
+          sx={{ px: { xs: 3, sm: 8, md: 15, lg: 25, xl: 35 } }} 
+        >
+          <Typography className="paragraph" textAlign={"justify"} component="div">
+            {t("oggi-espressione")} <i>{t("arte-contemporanea")}</i> {t("riferimento-arte")}
+            <br /> <br />
+            {t("visitando-mostra")}{" "}<i>Spola D’Oro</i>,{" "}{t("alla-briglia")}
+            <br /> <br />
+            {t("nata-a-venezia")}
+            <br /> <br />
+            {t("accanto-alle-opere")},{" "}
+            <i>“il vento sulla pelle”</i>:
+          </Typography>
+          <br />
+          <Grid item xs={12} mt={3} mb={3}>
+            <Typography
+              className="paragraph"
+              textAlign={"center"}
+              fontStyle={"italic"}
+              sx={{ px: { xs: 0, md: 5 } }}
+            >
+              {t("verso-1")}
+              <br /> <br />
+              {t("verso-2")}
+              <br /> <br />
+              {t("verso-3")}
+              <br /> <br />
+              {t("verso-4")}
+            </Typography>
+          </Grid>
+
+          <Typography className="paragraph" textAlign={"justify"} component="div">
+            {t("descrizione-arte")}
+          </Typography>
+
+          {/* Sezione Citazione Finale: Corsivo e rientrata */}
+          <Grid item xs={12} mt={3}>
+            <Typography
+              className="paragraph"
+              textAlign={"justify"} // O "center" se preferisci l'allineamento della poesia
+              fontStyle={"italic"}
+              sx={{ px: { xs: 0, md: 4 }, borderLeft: {md: "2px solid #ccc"}, pl: {md: 2} }} // Opzionale: aggiunge una linea laterale elegante su desktop
+            >
+              {t("un-mondo-femminile")}
+            </Typography>
+          </Grid>
+        </Grid>
+      </div>
       <div style={{ margin: "5%" }}>
         <Typography
           textAlign={"center"}

@@ -93,9 +93,8 @@ const BiographyPage = () => {
           </Typography>
           <Typography className="paragraph" mt={"0.5%"}>
             - {t("casa-editrice")} Sillabe Livorno,{" "}
-            {t("ritratto-gigi-proietti")} <br />- {t("casa-editrice")}{" "}
-            Pluriversum Ferrara, {t("evolution-la-saga-del-trio")}. <br />-{" "}
-            {t("annuncio-prossima-uscita")}.
+            {t("ritratto-gigi-proietti")} <br />- {" "}
+            {t("autrice-cover")}
           </Typography>
         </Grid>
         <Grid
