@@ -5,7 +5,7 @@ import HomePage from "../pages/HomePage";
 const Home = () => {
   return (
     <Layout>
-      <DynamicHelmet page="home" />
+      <DynamicHelmet page="in-primo-piano" />
       <HomePage />
     </Layout>
   );
