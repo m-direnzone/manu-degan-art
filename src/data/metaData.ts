@@ -1,18 +1,18 @@
 import { PageType } from "../interface";
 
 export const metaData: Record<PageType, { title: string; description: string; keywords: string }> = {
-    home: {
-      title: 'Home Page - Emanuela Degan',
-      description: 'Benvenuto nella Home Page di Emanuela Degan. Scopri le opere d\'arte a Firenze e Mugello.',
-      keywords: 'Emanuela, Degan, Emanuela Degan, manu degan, manu degan art, arte firenze, arte mugello, Pittore firenze, Pittrice Firenze, pittore, pittrice mugello, Pittore mugello, pittrice mugello'
+    galleria: {
+      title: 'Galleria - Opere di Emanuela Degan',
+      description: 'Sfoglia la galleria delle opere di Emanuela Degan, pittore e pittrice a Firenze e Mugello.',
+      keywords: 'Emanuela, Degan, Emanuela Degan, galleria, opere, arte firenze, arte mugello, Pittore firenze, Pittrice Firenze, pittore, pittrice mugello, Pittore mugello, pittrice mugello'
     },
     biografia: {
       title: 'Biografia - Emanuela Degan',
       description: 'Leggi la biografia di Emanuela Degan, artista e pittrice di Firenze e Mugello.',
       keywords: 'Emanuela, Degan, biografia, Emanuela Degan, manu degan art, arte firenze, arte mugello, vita Emanuela Degan, premi emanuela degan, mostre arte firenze, mostre emanuela degan'
     },
-    galleria: {
-      title: 'Galleria - Opere di Emanuela Degan',
+    "in-primo-piano": {
+      title: 'In Primo Piano - Emanuela Degan',
       description: 'Sfoglia la galleria delle opere di Emanuela Degan, pittore e pittrice a Firenze e Mugello.',
       keywords: 'galleria, opere, Emanuela Degan, manu degan art, arte, pittore, pittrice'
     },

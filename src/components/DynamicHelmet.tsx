@@ -6,7 +6,7 @@ interface DynamicHelmetProps {
     page: PageType
 }
 const DynamycHelmet = ({page}: DynamicHelmetProps) => {  
-    const meta = metaData[page] || metaData.home;
+    const meta = metaData[page] || metaData.galleria;
     return (
         <Helmet>
             <title>{meta.title}</title>
